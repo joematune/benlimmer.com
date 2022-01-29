@@ -30,6 +30,10 @@ layout: default
       <h5>Find an issue?</h5>
       Open a pull request against my blog
       <a href='https://github.com/blimmer/benlimmer.com' target='_blank' rel="noopener">on GitHub</a>.
+
+      <h5>Was this page helpful?</h5>
+      <i role='button' aria-label='yes' onclick="sendFeedback(true)">{% octicon thumbsup height:24 %}</i>
+      <i role='button' aria-label='no' onclick="sendFeedback(false)">{% octicon thumbsdown height:24 %}</i>
     </div>
 
     <div class="pagination justify-content-between">
@@ -49,3 +53,7 @@ layout: default
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  {% include posts/send_feedback.js url=page.url %}
+</script>
